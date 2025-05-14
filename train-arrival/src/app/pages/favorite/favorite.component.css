@@ -1,0 +1,136 @@
+.favorites-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  max-width: 500px;
+  margin: 24px auto;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.favorites-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.favorites-title {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #2d3748;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.favorites-count {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  margin-left: 12px;
+  box-shadow: 0 2px 4px rgba(118, 75, 162, 0.15);
+}
+
+.favorites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #f8fafc;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.favorite-item:hover {
+  background: #f1f5f9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.station-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.station-name {
+  font-weight: 500;
+  color: #2d3748;
+  margin-bottom: 2px;
+}
+
+.station-code {
+  font-size: 0.85rem;
+  color: #718096;
+  font-family: 'SF Mono', 'Roboto Mono', monospace;
+  letter-spacing: 0.5px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  width: 32px;
+  height: 32px;
+}
+
+.remove-btn:hover {
+  background: rgba(254, 178, 178, 0.3);
+  color: #f56565;
+  transform: scale(1.1);
+}
+
+.remove-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 30px 0;
+  color: #a0aec0;
+}
+
+.empty-state svg {
+  margin-bottom: 12px;
+  opacity: 0.6;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 1rem;
+  color: #718096;
+}
+
+@media (max-width: 600px) {
+  .favorites-section {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 16px auto;
+  }
+
+  .favorite-item {
+    padding: 12px 16px;
+  }
+  
+  .favorites-title {
+    font-size: 1.2rem;
+  }
+}

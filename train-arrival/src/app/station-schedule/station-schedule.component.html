@@ -1,0 +1,25 @@
+<div class="schedule-header">
+  <p>Расписание</p>
+</div>
+
+<div class="schedule-container" *ngIf="schedule; else loading">
+  <div class="schedule-column-headers desktop-only">
+    <p class="header-title">Маршрут</p>
+    <p class="header-departure">Отправление</p>
+  </div>
+
+  <div *ngFor="let item of schedule" class="schedule-item">
+    <p class="schedule-title">{{ item.title }}</p>
+    <p class="schedule-departure">{{ item.departure.slice(0, 5) }}</p>
+  </div>
+
+  <div *ngIf="schedule.length === 0" class="for-template">
+    <p>Расписание не найдено.</p>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="for-template">
+    <p>Загрузка расписания...</p>
+  </div>
+</ng-template>

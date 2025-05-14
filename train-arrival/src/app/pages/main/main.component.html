@@ -1,0 +1,29 @@
+<div class="input-area">
+  <label>Найдите свою станцию</label>
+  <input 
+    [(ngModel)]="inputValue" 
+    placeholder="Например: Самара" 
+    (keyup.enter)="search()" 
+    aria-label="Введите название станции"
+  />
+  <button (click)="search()" class="search-button">
+    Найти станцию
+  </button>
+</div>
+
+<div *ngIf="station; else notFound">
+  <app-station-card 
+    [station]="station" 
+    (stationSelected)="onStationSelected($event)"
+  ></app-station-card>
+</div>
+
+<ng-template #notFound>
+  <div class="not-found" *ngIf="showScheduleClicked">
+    <p>Станция не найдена</p>
+  </div>
+</ng-template>
+
+<app-station-schedule 
+  *ngIf="showScheduleClicked && station != undefined"
+></app-station-schedule>
